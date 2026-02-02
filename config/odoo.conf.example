@@ -1,0 +1,9 @@
+[options]
+addons_path = /usr/lib/python3/dist-packages/odoo/addons,/mnt/custom_addons
+db_host =
+db_port =
+db_user =
+db_password =
+log_level =
+admin_passwd =
+

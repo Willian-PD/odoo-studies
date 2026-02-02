@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_partner_form_inherit_instrutor" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.instrutor</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="after">
+                <group string="Instrutor">
+                    <field name="eh_instrutor"/>
+                    <field name="especialidade"
+                            invisible="not eh_instrutor"/>
+                    <field name="valor_hora"
+                            invisible="not eh_instrutor"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
