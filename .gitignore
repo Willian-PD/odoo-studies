@@ -1,2 +1,2 @@
 config/odoo.conf
-/compose.yaml
+compose.yaml
