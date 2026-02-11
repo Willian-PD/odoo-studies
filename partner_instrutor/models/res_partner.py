@@ -11,7 +11,8 @@ class ResPartner(models.Model):
     eh_instrutor = fields.Boolean(string='É Instrutor?')
     especialidade = fields.Char(string='Especialidade')
     valor_hora = fields.Float(string='Valor por Hora')
-
+    
+    '''
     @api.constrains("eh_instrutor", "especialidade")
     def _check_instrutor_especialidade(self):
         for record in self:
@@ -19,7 +20,7 @@ class ResPartner(models.Model):
                 raise ValidationError("Para marcar como instrutor, informe a especialidade.")
 
     # Override write e create para adicionar logs
-    '''
+    
     def write(self, vals):
         was_instrutor = {r.id: r.eh_instrutor for r in self}
 
